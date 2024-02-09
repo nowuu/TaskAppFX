@@ -15,7 +15,7 @@ import java.util.List;
 
 public class TareasController {
 
-    private User userLogged;
+    public User userLogged;
 
 
     public User getUserLogged() {
@@ -137,4 +137,7 @@ public boolean deleteTask(int idtask){
         return task.getAll();
    }
 
+    public boolean isAdmin() {
+        return userLogged.getRol().getIdRol()==2?true:false;
+    }
 }

@@ -4,29 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c3a970-387a-4ab1-81e6-5a7bdf93b083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/TaskApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/bbdd/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controller/TareasController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/ModeloBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/Login-view.fxml" afterDir="false" />
+    <list default="true" id="67c3a970-387a-4ab1-81e6-5a7bdf93b083" name="Changes" comment="JAVAfx conectamos la apptareas con javafx">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/AdminControllerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/IcontrollerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/UserControllerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/admin-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/user-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controller/TareasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controller/TareasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/Login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/Login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +25,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -63,12 +51,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.TaskApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/TareasAPP"
+    "last_directory_selection": "C:/Users/Alumno Tarde/IdeaProjects/appTaskFX/src/main/java/com/ceica/apptaskfx",
+    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/demo"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,7 +77,7 @@
       <module name="appTaskFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceica.apptaskfx.*" />
+          <option name="PATTERN" value="com.ceica.apptaskfx.controllerview.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,7 +90,7 @@
       <module name="appTaskFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ceica.apptaskfx.*" />
+          <option name="PATTERN" value="com.ceica.apptaskfx.controllerview.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,6 +114,19 @@
       <option name="presentableId" value="Default" />
       <updated>1707419834920</updated>
     </task>
+    <task id="LOCAL-00001" summary="JAVAfx conectamos la apptareas con javafx">
+      <option name="closed" value="true" />
+      <created>1707493061482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707493061482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="JAVAfx conectamos la apptareas con javafx" />
+    <option name="LAST_COMMIT_MESSAGE" value="JAVAfx conectamos la apptareas con javafx" />
   </component>
 </project>
