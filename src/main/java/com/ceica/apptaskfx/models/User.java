@@ -1,21 +1,20 @@
 package com.ceica.apptaskfx.models;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User extends ModeloBase{
      private int idUser;
      private String username;
 
-     private int password;
+     private String password;
       private Rol rol;
 
     public User() {
     }
 
-    public User(int idUser, String username, int password, Rol rol) {
+    public User(int idUser, String username, String password, Rol rol) {
         this.idUser = idUser;
         this.username = username;
         this.password = password;
@@ -41,11 +40,11 @@ public class User extends ModeloBase{
         this.username = username;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -108,5 +107,30 @@ public class User extends ModeloBase{
         }
 
 
+    }
+
+
+    public List<User> getAll() {
+        List<User> userList=new ArrayList<>();
+        User user=new User();
+        Connection conn=user.getConnection();
+        String consulta="SELECT u.iduser, u.username, u.rol, r.descripcion FROM user u INNER JOIN rol r ON u.rol = r.id";
+        try {
+            Statement stm=conn.createStatement();
+            ResultSet resultSet=stm.executeQuery(consulta);
+            while (resultSet.next()){
+                User user1=new User();
+                user1.setIdUser(resultSet.getInt("iduser"));
+                user1.setUsername(resultSet.getString("username"));
+                Rol rol1=new Rol();
+                rol1.setIdRol(resultSet.getInt("rol"));
+                rol1.setDescripcion(resultSet.getString("descripcion"));
+                user1.setRol(rol1);
+                userList.add(user1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return userList;
     }
 }

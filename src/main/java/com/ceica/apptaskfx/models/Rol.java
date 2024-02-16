@@ -1,7 +1,11 @@
 package com.ceica.apptaskfx.models;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Rol extends ModeloBase{
 
@@ -52,5 +56,24 @@ public class Rol extends ModeloBase{
     protected Object createObjectFromResultSet(ResultSet resultSet) throws SQLException {
         return null;
     }
-
+    public List<Rol> getAll() {
+        List<Rol> rolList=new ArrayList<>();
+        Rol rol=new Rol();
+        Connection conn=rol.getConnection();
+        String consulta="select id,descripcion from rol";
+        try {
+            Statement stm=conn.createStatement();
+            ResultSet resultSet=stm.executeQuery(consulta);
+            while (resultSet.next()){
+                Rol rol1=new Rol();
+                rol1.setIdRol(resultSet.getInt("id"));
+                rol1.setDescripcion(resultSet.getString("descripcion"));
+                rolList.add(rol1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rolList;
+    }
 }
+

@@ -33,17 +33,18 @@ public class LoginController {
             String titleWindow;
             if(taskController.isAdmin()){
                 view="admin-view.fxml";
-                titleWindow="User";
+                titleWindow="Admin";
             }else{
                 view="user-view.fxml";
-                titleWindow="Admin";
+                titleWindow="User";
+
 
 
             }
             FXMLLoader loader=new FXMLLoader(TaskApplication.class.getResource(view));
             try {
                 Parent root=loader.load();
-                IcontrollerView controller =loader.getController();
+                ControllerView controller =loader.getController();
                 controller.setTaskController(taskController);
                 Scene scene=new Scene(root);
                 Stage stage=new Stage();

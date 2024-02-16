@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67c3a970-387a-4ab1-81e6-5a7bdf93b083" name="Changes" comment="JAVAfx conectamos la apptareas con javafx">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/AdminControllerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/IcontrollerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/UserControllerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/admin-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/user-view.fxml" afterDir="false" />
+    <list default="true" id="67c3a970-387a-4ab1-81e6-5a7bdf93b083" name="Changes" comment="falta hacer el user controller u admin controller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/ControllerView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controller/TareasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controller/TareasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/AdminControllerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/AdminControllerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/IcontrollerView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/Login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/Login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/UserControllerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/controllerview/UserControllerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/apptaskfx/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ceica/apptaskfx/admin-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +25,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -55,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "abstract",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/Alumno Tarde/IdeaProjects/appTaskFX/src/main/java/com/ceica/apptaskfx",
     "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/demo"
@@ -122,11 +128,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707493061482</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="falta hacer el user controller u admin controller">
+      <option name="closed" value="true" />
+      <created>1707507145320</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707507145320</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JAVAfx conectamos la apptareas con javafx" />
-    <option name="LAST_COMMIT_MESSAGE" value="JAVAfx conectamos la apptareas con javafx" />
+    <MESSAGE value="falta hacer el user controller u admin controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="falta hacer el user controller u admin controller" />
   </component>
 </project>

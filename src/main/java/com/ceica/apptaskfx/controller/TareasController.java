@@ -3,6 +3,7 @@ package com.ceica.apptaskfx.controller;
 
 
 import com.ceica.apptaskfx.bbdd.Conexion;
+import com.ceica.apptaskfx.models.Rol;
 import com.ceica.apptaskfx.models.Task;
 import com.ceica.apptaskfx.models.User;
 
@@ -16,6 +17,7 @@ import java.util.List;
 public class TareasController {
 
     public User userLogged;
+
 
 
     public User getUserLogged() {
@@ -63,7 +65,7 @@ public class TareasController {
 //    }
 
 
-    public boolean newUsuario(String username, String password, int rol) {
+    public static boolean newUsuario(String username, String password, int rol) {
 
         // Crear un nuevo usuario
         User newUser = new User();
@@ -138,6 +140,19 @@ public boolean deleteTask(int idtask){
    }
 
     public boolean isAdmin() {
-        return userLogged.getRol().getIdRol()==2?true:false;
+        return userLogged.getRol().getIdRol()==1?true:false;
+    }
+    public static List<User> getAllUser() {
+        User user=new User();
+        return  user.getAll();
+    }
+    public static List<Rol> getAllRol() {
+        Rol rol=new Rol();
+        return rol.getAll();
+    }
+    public boolean updateUser(User user) {
+        return user.actualizar("password=?,idrol=? where iduser=?",user.getPassword(),user.getRol().getIdRol(),user.getIdUser());
     }
 }
+
+

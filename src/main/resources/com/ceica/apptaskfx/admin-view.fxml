@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.ceica.apptaskfx.controllerview.AdminControllerView"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ceica.apptaskfx.controllerview.AdminControllerView">
+    <children>
+        <TabPane layoutX="14.0" layoutY="36.0" prefHeight="349.0" prefWidth="572.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="User">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tblUser" layoutX="14.0" layoutY="14.0" prefHeight="281.0" prefWidth="338.0">
+                                    <columns>
+                                        <TableColumn fx:id="idColumn" prefWidth="75.20001220703125" text="ID" />
+                                        <TableColumn fx:id="userNameColumn" prefWidth="166.4000244140625" text="UserName" />
+                                        <TableColumn fx:id="rolColumn" prefWidth="96.79998779296875" text="Rol" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="txtUserName" layoutX="365.0" layoutY="14.0" promptText="Username" />
+                                <PasswordField fx:id="txtPassword" layoutX="366.0" layoutY="50.0" promptText="Password" />
+                                <PasswordField fx:id="txtrePassword" layoutX="367.0" layoutY="88.0" promptText="Repit Password" />
+                                <ComboBox fx:id="comboRol" layoutX="367.0" layoutY="130.0" prefWidth="150.0" promptText="Rol" />
+                                <Button layoutX="459.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnAddUser" prefHeight="26.0" prefWidth="75.0" text="Add" />
+                                <Label fx:id="lblMsg" layoutX="366.0" layoutY="216.0" textFill="#ec0505" />
+                                <Button fx:id="btnUpdate" layoutX="367.0" layoutY="162.0" mnemonicParsing="false" onAction="#btnUpdateUser" prefHeight="26.0" prefWidth="73.0" text="Update" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Task View">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
 </AnchorPane>
